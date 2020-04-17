@@ -42,7 +42,7 @@ export const MultiStepsLayout = ({
                   gridColumn="1"
                   onClick={form.prevStep}
                 >
-                Previous
+                  Previous
                 </Button>
               )}
               <Box

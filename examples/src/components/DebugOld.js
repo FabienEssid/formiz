@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from '@formiz/react';
+import { useForm } from '@formiz/core';
 import { Box } from '@chakra-ui/core';
 
 const propTypes = {};
@@ -16,9 +16,9 @@ export const Debug = () => {
       flex="1"
     >
       <Box fontSize="sm" color="gray.400">
-        # Debug New Package
+        # Debug - Form values
       </Box>
-      {JSON.stringify(form, null, 2)}
+      {JSON.stringify(form.values, null, 2)}
     </Box>
   );
 };

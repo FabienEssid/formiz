@@ -1,0 +1,64 @@
+{
+  "name": "@formiz/react",
+  "version": "1.0.0-rc.11",
+  "repository": "https://github.com/ivan-dalmet/formiz/tree/master/packages/react",
+  "homepage": "https://formiz-react.com/",
+  "author": "Ivan Dalmet <ivan@dalmet.fr> (https://ivan.dalmet.fr/)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "forms",
+    "wizard",
+    "multi-step-form",
+    "form-validation",
+    "form-validation-react",
+    "form-fields"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/react.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {
+    "rxjs": "6.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "husky": "^4.2.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tsdx": "^0.13.2",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  }
+}

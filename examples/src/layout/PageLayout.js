@@ -1,14 +1,17 @@
 import React, { useRef, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Stack, Box, Flex } from '@chakra-ui/core';
+import { Debug as DebugOld } from '../components/DebugOld';
 import { Debug } from '../components/Debug';
 import { useDarkTheme } from '../hooks/isDarkTheme';
 
 const propTypes = {
   children: PropTypes.node,
+  newPackage: PropTypes.bool,
 };
 const defaultProps = {
   children: '',
+  newPackage: false,
 };
 
 const useDebugTime = () => {
@@ -32,7 +35,7 @@ const useDebugTime = () => {
   });
 };
 
-export const PageLayout = ({ children }) => {
+export const PageLayout = ({ children, newPackage, ...props }) => {
   useDebugTime();
   const isDarkTheme = useDarkTheme();
 
@@ -42,6 +45,7 @@ export const PageLayout = ({ children }) => {
       minH="100vh"
       flexWrap="nowrap"
       flexDirection={{ base: 'column', lg: 'row' }}
+      {...props}
     >
       <Box
         flex="1"
@@ -72,7 +76,7 @@ export const PageLayout = ({ children }) => {
         color="gray.100"
         p={{ base: 4, lg: 8 }}
       >
-        <Debug />
+        {newPackage ? <Debug /> : <DebugOld />}
       </Flex>
     </Stack>
   );

@@ -2,7 +2,7 @@ const isObject = (x) => x && typeof x === 'object' && x.constructor === Object;
 
 const parseValues = (values) => Object.keys(values)
   .reduce(
-    (acc, key) => parseValuesName(key, acc), // eslint-disable-line no-use-before-define
+    (acc, key) => parseValuesName(key, acc), // eslint-disable-line
     values,
   );
 
