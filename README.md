@@ -1,4 +1,4 @@
-# Welcome to 🐜 Formiz
+# Welcome to 🐜 Formiz - Coucou
 React **forms with easy validation and multi steps**
 
 ![Tests Badge](https://github.com/ivan-dalmet/formiz/workflows/Formiz%20Test/badge.svg)
